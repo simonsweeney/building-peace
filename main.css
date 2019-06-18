@@ -1,0 +1,230 @@
+@font-face {
+  font-family: Peace;
+  src: url("font.ttf");
+}
+/* line 21, scss/main.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 28, scss/main.scss */
+body {
+  padding: 20px;
+  font-family: 'Spectral', serif;
+  font-size: 20px;
+  color: #836743;
+}
+
+/* line 35, scss/main.scss */
+.rule {
+  height: 1px;
+}
+/* line 38, scss/main.scss */
+.rule--brown {
+  background-color: #836743;
+}
+
+/* line 43, scss/main.scss */
+.intro {
+  text-transform: lowercase;
+  color: #35221D;
+  font-family: Peace, sans-serif;
+  margin-bottom: 100px;
+  font-variation-settings: "wght" 80;
+  animation-name: fontchange;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fontchange {
+  from {
+    font-variation-settings: "wght" 80;
+  }
+  to {
+    font-variation-settings: "wght" 139;
+  }
+}
+/* line 63, scss/main.scss */
+.back {
+  display: block;
+  color: #836743;
+  text-decoration: none;
+  border: 1px solid #836743;
+  margin-top: 20px;
+  padding: 20px;
+}
+/* line 71, scss/main.scss */
+.back:hover {
+  background-color: #836743;
+  color: white;
+}
+
+/* line 77, scss/main.scss */
+.form p {
+  color: #836743;
+}
+
+/* line 81, scss/main.scss */
+input {
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px dotted #836743;
+  font-size: 20px;
+}
+/* line 89, scss/main.scss */
+input.val {
+  width: 100%;
+  margin-bottom: 70px;
+}
+/* line 94, scss/main.scss */
+input.submit {
+  border: 1px solid #836743;
+  color: #836743;
+  cursor: pointer;
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+  font-family: 'Spectral', serif;
+}
+/* line 104, scss/main.scss */
+input.submit:hover {
+  background-color: #836743;
+  color: white;
+}
+
+/* line 113, scss/main.scss */
+.letter input.word {
+  width: 100%;
+  margin-bottom: 70px;
+  color: #35221D;
+  font-family: Peace, sans-serif;
+  font-variation-settings: "wght" 80;
+  font-size: 15vw;
+  line-height: 1.5;
+  padding: 20px 0;
+  height: auto;
+}
+/* line 124, scss/main.scss */
+.letter input.word::placeholder {
+  color: #836743;
+  line-height: 1.5;
+}
+
+/* line 131, scss/main.scss */
+.words {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-family: 'Spectral', serif;
+  line-height: 1.2;
+  color: #35221D;
+}
+/* line 141, scss/main.scss */
+.words p span {
+  color: #836743;
+}
+/* line 145, scss/main.scss */
+.words p.large {
+  margin-top: 0.5em;
+  font-size: 40px;
+}
+@media (max-width: 768px) {
+  /* line 145, scss/main.scss */
+  .words p.large {
+    font-size: 28px;
+  }
+}
+
+/* line 156, scss/main.scss */
+.text {
+  margin-top: 200px;
+  font-size: 40px;
+  line-height: 1.2;
+  font-family: 'Spectral', serif;
+  margin-bottom: 100px;
+  color: #836743;
+}
+/* line 164, scss/main.scss */
+.text p:not(:first-of-type) {
+  text-indent: 4em;
+}
+@media (max-width: 768px) {
+  /* line 164, scss/main.scss */
+  .text p:not(:first-of-type) {
+    text-indent: 2em;
+  }
+}
+/* line 171, scss/main.scss */
+.text .left {
+  margin-top: 20px;
+  width: 80%;
+}
+@media (max-width: 768px) {
+  /* line 171, scss/main.scss */
+  .text .left {
+    width: 100%;
+    font-size: 28px;
+  }
+}
+/* line 181, scss/main.scss */
+.text .right {
+  margin-top: 20px;
+  width: 50%;
+  margin-left: 45%;
+  font-size: 20px;
+  line-height: 1.4;
+}
+@media (max-width: 768px) {
+  /* line 181, scss/main.scss */
+  .text .right {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* line 196, scss/main.scss */
+.entries {
+  padding: 20px 0 60px 0;
+}
+/* line 199, scss/main.scss */
+.entries .entry {
+  font-size: 100px;
+  text-transform: lowercase;
+  font-family: Peace, sans-serif;
+  position: relative;
+  display: inline-block;
+  color: black;
+}
+@media (max-width: 768px) {
+  /* line 199, scss/main.scss */
+  .entries .entry {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+}
+/* line 212, scss/main.scss */
+.entries .entry:not(:last-child):after {
+  content: ',';
+  color: #836743;
+  padding-right: 10px;
+}
+/* line 218, scss/main.scss */
+.entries .entry sup {
+  font-family: 'Spectral', serif;
+  font-size: 16px;
+  position: absolute;
+  color: #836743;
+  bottom: -25px;
+  left: 40px;
+}
+@media (max-width: 768px) {
+  /* line 218, scss/main.scss */
+  .entries .entry sup {
+    font-size: 12px;
+  }
+}

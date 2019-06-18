@@ -1,0 +1,231 @@
+@mixin tablet {
+  @media (max-width: 768px) { @content; }
+}
+
+// color
+
+$light-brown: #836743;
+$dark-brown: #35221D;
+$light-grey: #9A9492;
+$dark-grey: #635D5C;
+
+
+
+
+
+@font-face {
+    font-family: Peace;
+    src: url('font.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 20px;
+    font-family: 'Spectral', serif;
+    font-size: 20px;
+    color: $light-brown;
+}
+
+.rule {
+    height: 1px;
+    
+    &--brown {
+        background-color: $light-brown;
+    }
+}
+
+.intro {
+    text-transform: lowercase;
+    color: $dark-brown;
+    font-family: Peace, sans-serif;
+    margin-bottom: 100px;
+    font-variation-settings: "wght" 80;
+    animation-name: fontchange;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes fontchange {
+    from {font-variation-settings: "wght" 80;}
+    to {font-variation-settings: "wght" 139;}
+}
+
+
+.back {
+    display: block;
+    color: $light-brown;
+    text-decoration: none;
+    border: 1px solid $light-brown;
+    margin-top: 20px;
+    padding: 20px;
+    
+    &:hover {
+        background-color: $light-brown;
+        color: white;
+    }
+}
+
+.form p {
+    color: $light-brown;
+}
+
+input {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px dotted $light-brown;
+    font-size: 20px;
+
+    
+    &.val {
+        width: 100%;
+        margin-bottom: 70px;
+    }
+    
+    &.submit {
+        border: 1px solid $light-brown;
+        color: $light-brown;
+        cursor: pointer;
+        width: 100%;
+        padding: 20px;
+        text-align: left;
+        font-family: 'Spectral', serif;
+        
+        
+        &:hover {
+            background-color: $light-brown;
+            color: white;
+        }
+    }
+}
+
+
+.letter {
+    input.word {
+        width: 100%;
+        margin-bottom: 70px;
+        color: $dark-brown;
+        font-family: Peace, sans-serif;
+        font-variation-settings: "wght" 80;
+        font-size: 15vw;
+        line-height: 1.5;
+        padding: 20px 0;
+        height: auto;
+        
+        &::placeholder {
+            color: $light-brown;
+            line-height: 1.5;
+        }
+    }
+}
+
+.words {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: 'Spectral', serif;
+    line-height: 1.2;
+    color: $dark-brown;
+
+
+    p {
+        span {
+            color: $light-brown;
+        }
+    
+        &.large {
+            margin-top: 0.5em;
+            font-size: 40px;
+            
+            @include tablet {
+                font-size: 28px;
+            }
+        }    
+    }
+}
+
+.text {
+    margin-top: 200px;
+    font-size: 40px;
+    line-height: 1.2;
+    font-family: 'Spectral', serif;
+    margin-bottom: 100px;
+    color: $light-brown;
+    
+    p:not(:first-of-type) {
+        text-indent: 4em;
+        
+        @include tablet {
+            text-indent: 2em;
+        }
+    }
+    .left {
+        margin-top: 20px;
+        width: 80%;
+        
+        @include tablet {
+            width: 100%;
+            font-size: 28px;
+        }
+    }
+    
+    .right {
+        margin-top: 20px;
+        width: 50%;
+        margin-left: 45%;
+        font-size: 20px;
+        line-height: 1.4;
+        
+        @include tablet {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+
+.entries {
+    padding: 20px 0 60px 0;
+    
+    .entry {
+        font-size: 100px;
+        text-transform: lowercase;
+        font-family: Peace, sans-serif;
+        position: relative;
+        display: inline-block;
+        color: black;
+        
+        @include tablet {
+                font-size: 50px;
+                margin-bottom: 20px;
+        }
+        
+        &:not(:last-child):after {
+            content: ','; 
+            color: $light-brown;
+            padding-right: 10px;
+        }
+        
+        sup {
+            font-family: 'Spectral', serif;
+            font-size: 16px;
+            position: absolute;
+            color: $light-brown;
+            bottom: -25px;
+            left: 40px;
+            
+            @include tablet {
+                font-size: 12px;
+            }
+        }
+    }
+}
